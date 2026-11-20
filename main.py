@@ -85,13 +85,22 @@ STALE_HOURS = 2.0
 # A refresh roughly triples the tracked players on launch week (the first
 # one the rules record multiplied them sixfold, 638 -> 3,868), and the
 # newcomers have earned almost nothing, so a refresh cuts most rates to
-# roughly a third: about -1.0 logit units. With the page stale, a refresh
+# roughly a quarter: about -1.3 logit units. With the page stale, a refresh
 # before a short-horizon target is the likelier outcome, so the median
-# sits near the refreshed level rather than the flat one.
-DILUTION_SHIFT = -1.0   # logit units
+# sits near the refreshed level rather than the flat one. (Calibrated
+# 2026-11-20: -1.0 left the practice medians ~1.1 logit units too high;
+# -1.3 improved every trophy fold of a 5-fold split of the practice
+# trophies and was kept deliberately short of the proxy-optimal ~-2.0,
+# which would overfit the reconstructed practice answers.)
+DILUTION_SHIFT = -1.3   # logit units
 DILUTION_SPREAD = 0.4
 
-SIGMA_RW = 0.45        # random-walk spread, logit units per sqrt(day)
+SIGMA_RW = 0.25        # random-walk spread, logit units per sqrt(day)
+# (Calibrated 2026-11-20: 0.45 made the 90% band cover ~98% of synthetic
+# final-shaped truths -- too wide in the middle quantiles. 0.25 keeps
+# coverage ~0.90-0.93 on held-out synthetic worlds and cut their pinball
+# loss ~7% overall, ~14% on final-shaped cases; 0.15-0.20 narrowed the
+# band below honest coverage and gained nothing further.)
 REFRESH_SPREAD = 0.30  # spread from the refresh jumps inside the horizon
 DEFAULT_RESID = 0.35   # residual scatter when a trophy has no fit
 MAX_SLOPE = 4.0        # cap on any fitted/shrunk slope

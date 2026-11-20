@@ -72,10 +72,20 @@ than the fit) checks the machinery on final-shaped data.
 
 | check | this entry | house baseline (starter) |
 |---|---|---|
-| practice p00, pinball loss (proxy answers) | 0.68 | 1.40 |
-| practice p01, pinball loss (proxy answers) | 0.63 | 1.40 |
-| synthetic final, pinball loss | 0.22 | 0.31 |
+| practice p00, pinball loss (proxy answers) | 0.46 | 1.40 |
+| practice p01, pinball loss (proxy answers) | 0.42 | 1.40 |
+| synthetic final, pinball loss | 0.15 | 0.31 |
 | runtime per case | ~0.07 s | ~0.07 s |
+
+Recalibrated 2026-11-20 against a multi-family synthetic suite (10 fit
+worlds, 10 held-out worlds with shifted parameters; final-shaped cases
+checkpointed at 59.5 h with a 108.5 h horizon) plus a 5-fold trophy split
+of the practice trophies: the random-walk spread went 0.45 → 0.25 logit
+units (the old band covered ~98% of synthetic truths; the new one ~0.90)
+and the stale-page dilution shift −1.0 → −1.3 logit units (kept well
+short of the proxy-optimal ~−2.0 to avoid fitting the reconstructed
+practice answers). Held-out synthetic loss improved ~7% overall and ~14%
+on final-shaped cases; proxy practice loss 0.65 → 0.44.
 
 The practice cases are a smoke check only: their history is one repeated
 read, so no trend can be fitted there and nothing was tuned on them.
