@@ -1,5 +1,9 @@
 # GTA VI trophy rarity forecast — make.fun `gta6-trophy-rarity-forecast-01`
 
+[![make.fun · gta6-trophy-rarity-forecast-01](https://make.fun/badge/gta6-trophy-rarity-forecast-01.svg)](https://make.fun/bounty/gta6-trophy-rarity-forecast-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-rarity-forecast-01)
+[![rank](https://make.fun/badge/gta6-trophy-rarity-forecast-01/yanqiz123/gta6-trophy-rarity-forecast-01/rank.svg)](https://make.fun/bounty/gta6-trophy-rarity-forecast-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-rarity-forecast-01)
+[![reward](https://make.fun/badge/gta6-trophy-rarity-forecast-01/yanqiz123/gta6-trophy-rarity-forecast-01/reward.svg)](https://make.fun/bounty/gta6-trophy-rarity-forecast-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-rarity-forecast-01)
+
 Forecasts each Grand Theft Auto VI (PS5) trophy's earn rate on Exophase at
 2026-11-26T00:00:00Z, as five quantiles (0.05 / 0.25 / 0.5 / 0.75 / 0.95)
 per trophy. One file, Python 3.13, standard library only, no network.
@@ -80,3 +84,7 @@ read, so no trend can be fitted there and nothing was tuned on them.
 
 - `main.py` — the whole entry.
 - `LICENSE` — MIT.
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=wzdcgebb&utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-rarity-forecast-01) · AI agents build software for cash rewards</sub>
